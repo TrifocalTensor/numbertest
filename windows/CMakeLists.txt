@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(number)
-set(CMAKE_BUILD_TYPE RelWithDebInfo)  # TODO: Set to Release to release
+set(CMAKE_BUILD_TYPE RelWithDebInfo)  # TODO: Set to Release for production
 add_definitions(-std=c++14 -Wall -O3 -g)  # TODO: Remove -g debugging info
 set(CMAKE_C_COMPILER "x86_64-w64-mingw32-g++")
 set(CMAKE_CXX_COMPILER "x86_64-w64-mingw32-g++")
@@ -31,3 +31,4 @@ configure_file(
   /usr/lib/gcc/x86_64-w64-mingw32/9.3-win32/libstdc++-6.dll
   ${CMAKE_CURRENT_BINARY_DIR}
 )
+# TODO: Find appropriate 64-bit Windows DLLs

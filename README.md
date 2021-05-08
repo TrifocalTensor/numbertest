@@ -8,7 +8,7 @@ Number test.
 $ sudo apt install build-essential make cmake mingw-w64
 ```
 
-2. Build project (if you have 4 cores):
+2. Build project (e.g. if you have 4 cores):
 
 ```
 $ mkdir -p build
@@ -20,13 +20,14 @@ $ make -j4
 3. Run unit tests:
 
 ```
-$ CTEST_OUTPUT_ON_FAILURE=1 ctest -j4
+$ ctest --verbose -j4
 ```
 
 4. Built executables:
 
 ```
 build/linux/number_main
-build/windows/number_main_win
+build/windows/number_main_win.exe
 ```
 
+Tested in Ubuntu 20.04.2 @ x86_64.

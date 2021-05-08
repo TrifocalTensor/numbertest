@@ -49,6 +49,12 @@ int main(int argc, char *argv[]) {
 
   ASSERT_EQUAL("a 123 b 456 c", number.Translate("a one hundred and twenty three b four hundred and fifty six c"));
 
+  ASSERT_EQUAL("11 aa bb cc 22", number.Translate("eleven aa bb cc twenty two"));
+  ASSERT_EQUAL("x a 11 m p 22 n q 33 c y", number.Translate("x a eleven m p twenty two n q thirty three c y"));
+  ASSERT_EQUAL("xxx yyy zzz", number.Translate("xxx yyy zzz"));
+  ASSERT_EQUAL("xyz", number.Translate("xyz"));
+  //ASSERT_EQUAL("a and b", number.Translate("a and b"));  // TODO: Fix case
+
   // TODO: Test all numbers from 1 to 20
   // TODO: Test 20, 30, 40, ..., 100
   // TODO: Test 1000, 10000, 100000, ..., 1000000000

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(number)
-set(CMAKE_BUILD_TYPE RelWithDebInfo)  # TODO: Set to Release to release
+set(CMAKE_BUILD_TYPE RelWithDebInfo)  # TODO: Set to Release for production
 add_definitions(-std=c++14 -Wall -O3 -g)  # TODO: Remove -g debugging info
 include_directories(
 )

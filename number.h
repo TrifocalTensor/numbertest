@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-class Number {
+class Number {  // TODO: Find a better class name
  public:
   Number();
   ~Number();
