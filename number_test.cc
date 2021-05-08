@@ -49,5 +49,9 @@ int main(int argc, char *argv[]) {
 
   ASSERT_EQUAL("a 123 b 456 c", number.Translate("a one hundred and twenty three b four hundred and fifty six c"));
 
+  // TODO: Test all numbers from 1 to 20
+  // TODO: Test 20, 30, 40, ..., 100
+  // TODO: Test 1000, 10000, 100000, ..., 1000000000
+
   return EXIT_SUCCESS;
 }

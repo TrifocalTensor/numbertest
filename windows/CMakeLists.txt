@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
-project(verbio)
-set(CMAKE_BUILD_TYPE RelWithDebInfo)
-add_definitions(-std=c++14 -Wall -O3 -g)
+project(number)
+set(CMAKE_BUILD_TYPE RelWithDebInfo)  # TODO: Set to Release to release
+add_definitions(-std=c++14 -Wall -O3 -g)  # TODO: Remove -g debugging info
 set(CMAKE_C_COMPILER "x86_64-w64-mingw32-g++")
 set(CMAKE_CXX_COMPILER "x86_64-w64-mingw32-g++")
 include_directories(

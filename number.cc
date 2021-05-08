@@ -124,7 +124,7 @@ std::vector<std::string> Number::Tokenize(const std::string &str) {
     }
   }
   return tokens;   
-  // TODO: Use std::std::sregex_iterator() to iterate thru tokens 
+  // TODO: Use std::sregex_iterator() to iterate thru tokens 
 }
 
 std::string Number::Untokenize(const std::vector<std::string> &seq) {

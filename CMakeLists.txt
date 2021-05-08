@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(verbio)
+project(number)
 enable_testing()
 add_subdirectory(linux)
 add_subdirectory(windows)
