@@ -33,3 +33,5 @@ target_link_libraries(number_test
 add_test(NAME number_test
   COMMAND number_test
 )
+
+// TODO: Add code coverage analysis with gcov

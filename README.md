@@ -1,6 +1,6 @@
 # numbertest
 
-Number test
+Number test.
 
 1. Install needed tools:
 
@@ -11,6 +11,7 @@ $ sudo apt install build-essential make cmake mingw-w64
 2. Build project (if you have 4 cores):
 
 ```
+$ mkdir -p build
 $ cd build
 $ cmake ..
 $ make -j4
