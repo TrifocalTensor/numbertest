@@ -9,6 +9,7 @@
       "assert_equal failed: line " + std::to_string(__LINE__) + ": " + \
       "expected '" + (a) + "', obtained '" + (b) + "'"); \
 }
+// TODO: Move this macro to a dedicated testing header
 
 int main(int argc, char *argv[]) {
   Number number;
@@ -25,6 +26,15 @@ int main(int argc, char *argv[]) {
   ASSERT_EQUAL("a 1234567 b", number.Translate("a one million two hundred and thirty four thousand five hundred and sixty seven b"));
   ASSERT_EQUAL("a 12345678 b", number.Translate("a twelve million three hundred and forty five thousand six hundred and seventy eight b"));
   ASSERT_EQUAL("a 123456789 b", number.Translate("a one hundred twenty three million four hundred and fifty six thousand seven hundred and eighty nine b"));
+
+  ASSERT_EQUAL("1", number.Translate("one"));
+  ASSERT_EQUAL("10", number.Translate("ten"));
+  ASSERT_EQUAL("11", number.Translate("eleven"));
+  ASSERT_EQUAL("100", number.Translate("one hundred"));
+  ASSERT_EQUAL("101", number.Translate("one hundred and one"));
+  ASSERT_EQUAL("110", number.Translate("one hundred and ten"));
+  ASSERT_EQUAL("111", number.Translate("one hundred and eleven"));
+  ASSERT_EQUAL("1000", number.Translate("one thousand"));
 
   ASSERT_EQUAL("", number.Translate(""));
   ASSERT_EQUAL("", number.Translate(" "));

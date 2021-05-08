@@ -16,6 +16,9 @@ class Number {
   std::vector<std::string> Tokenize(const std::string &str);
   std::string Untokenize(const std::vector<std::string> &seq);
   std::string Trim(const std::string &str);
+
+  // TODO: This class does not have fields. Set all methods to static and 
+  // remove ctor & dtor.
 };
 
 #endif  // NUMBER_H_

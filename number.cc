@@ -12,6 +12,8 @@ std::string Number::Translate(const std::string &str) {
   std::vector<std::string> translated_tokens = Convert(tokens);
   std::string result = Untokenize(translated_tokens);
   return result;
+  // TODO: Extract tokens as needed instead of loading and processing whole 
+  // sequence in memory.
 }
 
 std::vector<std::string> Number::Convert(const std::vector<std::string> &seq) {
@@ -117,18 +119,19 @@ std::vector<std::string> Number::Tokenize(const std::string &str) {
   std::stringstream ss(Trim(str));
   std::string token;
   while (std::getline(ss, token, ' ')) {
-    if (token != "") {
+    if (token != "") {  // Consecutive spaces yield empty tokens
       tokens.push_back(token);
     }
   }
-  return tokens;      
+  return tokens;   
+  // TODO: Use std::std::sregex_iterator() to iterate thru tokens 
 }
 
 std::string Number::Untokenize(const std::vector<std::string> &seq) {
   std::ostringstream oss;
   std::copy(seq.begin(), seq.end(),
             std::ostream_iterator<std::string>(oss, " "));
-  return Trim(oss.str());
+  return Trim(oss.str());  // oss.str() has trailing space
 }
 
 std::string Number::Trim(const std::string &str) {
@@ -141,4 +144,5 @@ std::string Number::Trim(const std::string &str) {
   } else {
     return "";
   }
+  // TODO: Use std::regex_replace() to remove heading and trailing spaces
 }
