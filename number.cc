@@ -1,5 +1,6 @@
 #include "number.h"
 
+#include <algorithm>
 #include <iterator>
 #include <sstream>
 
@@ -115,8 +116,10 @@ std::vector<std::string> Number::Convert(const std::vector<std::string> &seq) {
 }
 
 std::vector<std::string> Number::Tokenize(const std::string &str) {
+  std::string clean_str = str;
+  std::replace(clean_str.begin(), clean_str.end(), '-', ' ');
   std::vector<std::string> tokens;
-  std::stringstream ss(Trim(str));
+  std::stringstream ss(Trim(clean_str));
   std::string token;
   while (std::getline(ss, token, ' ')) {
     if (token != "") {  // Consecutive spaces yield empty tokens
